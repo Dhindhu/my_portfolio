@@ -34,3 +34,24 @@ async function serverTime() {
   const dateContainer = document.getElementById('date-container');
   dateContainer.innerText = textFromResponse;
 }
+
+async function showMessage() {
+  const responseFromServer = await fetch('/hello');
+  const textFromResponse = await responseFromServer.text();
+
+  const messageContainer = document.getElementById('message-container');
+  messageContainer.innerText = textFromResponse;
+}
+
+//function to get random message from ArrayList function
+async function showWriters(){
+    const responseFromServer = await fetch('/writers');
+    const writers = await responseFromServer.json();
+
+    const randomWriter = writers[Math.floor(Math.random() * writers.length)];           
+    const writersListElement = document.getElementById('random-writer-container');
+    writersListElement.innerHTML = randomWriter;
+
+    writersListElement.appendChild(
+        createListElement("Today's writer of the day is: " + randomWriter));
+}

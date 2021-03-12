@@ -39,7 +39,15 @@
         <p>Click below to get an insightful message:</p>
         <button onclick="addRandomGreeting()">What are you today?</button>
         <div id="greeting-container"></div>
-        <h2>Server Date</h2>
+        <p>Click below to get the artist of the day:</p>
+        <button onclick="showWriters()">Today's writer is......</button>
+        <div id="random-writer-container"></div>
+        <form method="POST">
+            <p>Enter some text here:</p>
+            <textarea name="text-input">hello world</textarea>
+            <br/>
+            <input type="submit" />
+        </form>
         <p>Click this button to see the server's current date.</p>
         <button onclick="serverTime();">
             Get date
