@@ -42,9 +42,9 @@
         <p>Click below to get the artist of the day:</p>
         <button onclick="showWriters()">Today's writer is......</button>
         <div id="random-writer-container"></div>
-        <form method="POST">
-            <p>Enter some text here:</p>
-            <textarea name="text-input">hello world</textarea>
+        <form action="/form-handler" method="POST">
+            <p>Please leave a message for me below:</p>
+            <textarea name="text-input">Hi! I'm happy you're here😁</textarea>
             <br/>
             <input type="submit" />
         </form>
@@ -53,7 +53,6 @@
             Get date
         </button>
         <p id="date-container"></p>
-        <p>Click <a href="/date">here</a> to see the server response directly.</p>
       </center>
     </div>
   </body>  

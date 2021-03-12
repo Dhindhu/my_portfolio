@@ -55,3 +55,5 @@ async function showWriters(){
     writersListElement.appendChild(
         createListElement("Today's writer of the day is: " + randomWriter));
 }
+
+response.sendRedirect("http://calim-sps-spring21.appspot.com/");
